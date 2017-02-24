@@ -24,3 +24,9 @@ docker tag imagename rengokantai/new
 ```
 docker network inspect bridge
 ```
+
+
+###3.Docker Image Best Practices
+```
+docker commit containername imagename
+```
