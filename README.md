@@ -30,3 +30,29 @@ docker network inspect bridge
 ```
 docker commit containername imagename
 ```
+
+##4. Installing a Private (And Free) Docker Registry
+```
+firewall-cmd --zone=public --add-port=5000/tcp
+firewall-cmd --zone=public --add-port=5000/tcp --permanent
+```
+
+then
+```
+docker pull registry:latest
+```
+
+
+```
+docker run -p 5000:5000
+```
+###3 Installing and Using Docker Resistry: The Package Method
+```
+apt install docker-registry
+```
+but might have some issue. Here
+```
+wget http://http.us.debian.org/debian/pool/main/d/docker-gegistr/docker-registry_2..1-ds1-2_am64.deb
+dpkg -i
+```
+
