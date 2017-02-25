@@ -99,5 +99,9 @@ http:
     key: ...key
   headers:
     X-Content-Type-Options: [nosiniff]
-  
+```
+
+Add config.yml to container
+```
+docker run -d -p 5000:5000 --restart=always --name registry -v `pwd`/config.yml:/etc/docker/registry/config.yml registry
 ```
