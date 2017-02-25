@@ -56,3 +56,11 @@ wget http://http.us.debian.org/debian/pool/main/d/docker-gegistr/docker-registry
 dpkg -i
 ```
 
+```
+docke rmi -f hello-world localhost:5000/hello-world:latest
+```
+
+###3. Docker Images Storage
+```
+cd /var/lib/docker-registry/docker/registry/v2/repositories
+```
