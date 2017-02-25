@@ -79,3 +79,10 @@ docker volume create myvolume
 docker run -d -p 5000:5000 --restart=always --name registry -v `pwd` /certs:/certs -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/stuff.crt
 -e REGISTRY_HTTP_TLS_KEY=/certs/stuff.key registry
 ```
+Dockerfile
+```
+FROM registry
+ADD /certs/ /home/
+ENV REGISTRY_HTTP_TLS_CERTIFICATE=/certs/stuff.crt REGISTRY_HTTP_TLS_KEY=/certs/stuff.key
+EXPOSE 5000
+```
