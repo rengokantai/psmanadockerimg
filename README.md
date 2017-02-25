@@ -64,3 +64,8 @@ docke rmi -f hello-world localhost:5000/hello-world:latest
 ```
 cd /var/lib/docker-registry/docker/registry/v2/repositories
 ```
+
+container volume
+```
+/var/lib/docker/volumes/ccccc121c/_data/docker/registry/v2/repositories/hello-world
+```
