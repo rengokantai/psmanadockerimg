@@ -69,3 +69,13 @@ container volume
 ```
 /var/lib/docker/volumes/ccccc121c/_data/docker/registry/v2/repositories/hello-world
 ```
+
+```
+docker volume create myvolume
+```
+## 5. Securing Your Images in Transit
+###2 
+```
+docker run -d -p 5000:5000 --restart=always --name registry -v `pwd` /certs:/certs -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/stuff.crt
+-e REGISTRY_HTTP_TLS_KEY=/certs/stuff.key registry
+```
