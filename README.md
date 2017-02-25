@@ -105,3 +105,9 @@ Add config.yml to container
 ```
 docker run -d -p 5000:5000 --restart=always --name registry -v `pwd`/config.yml:/etc/docker/registry/config.yml registry
 ```
+
+
+###4 Configuration User Authentication
+```
+docker run --entrypoint htpassword registry -Bbn newuser mypassword >> auth/htpassword
+```
