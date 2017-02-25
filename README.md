@@ -86,3 +86,18 @@ ADD /certs/ /home/
 ENV REGISTRY_HTTP_TLS_CERTIFICATE=/certs/stuff.crt REGISTRY_HTTP_TLS_KEY=/certs/stuff.key
 EXPOSE 5000
 ```
+
+```
+vim /etc/docker/registry/config.yml
+```
+edit
+```
+http:
+  addr: :5000
+  tls:
+    certificate: /home/ubuntu/certs/stuff.crt
+    key: ...key
+  headers:
+    X-Content-Type-Options: [nosiniff]
+  
+```
